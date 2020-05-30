@@ -1,0 +1,4 @@
+.env
+/todo_app/*
+/todo_list/__pycache__
+/todo_list/migrations
