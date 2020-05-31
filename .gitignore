@@ -109,3 +109,6 @@ dmypy.json
 .pyre/
 # End of https://www.gitignore.io/api/django
 /todo_app/*
+/todo_list/__pycache__/*
+/todo_list/migrations/*
+.DS_Store
