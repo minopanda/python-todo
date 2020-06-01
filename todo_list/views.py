@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import List
 from .forms import ListForm
 from django.contrib import messages
@@ -22,3 +22,9 @@ def home(request):
 def about(request):
     context = {'first_name': 'Harry', 'last_name': 'Potter'}
     return render(request, 'about.html', context)
+
+def delete(request, list_id):
+    item = List.objects.get(pk=list_id)
+    item.delete()
+    messages.success(request, ('Item Has Been Deleted from List!'))
+    return redirect('home')
